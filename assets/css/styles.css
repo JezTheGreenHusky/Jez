@@ -214,26 +214,26 @@ Sobre mi
     padding: 2rem 0rem;
     background-color: #070b14;
 }
-.hobbys__texto {
+.programacion__texto {
     padding: 2rem;
 }
-.hobbys__texto p{
+.programacion__texto p{
     padding: .8rem;
 }
-.hobbys__texto i {
+.programacion__texto i {
     color: var(--blanco);
     font-size: 45px;
 }
-.hobbys__texto .fa-github:hover {
+.programacion__texto .fa-github:hover {
     color: var(--primary_light);
 }
-.hobbys__texto .fa-globe-americas:hover {
+.programacion__texto .fa-globe-americas:hover {
     color: var(--yellow_light);
 }
-.hobbys__texto .fa-robot:hover {
+.programacion__texto .fa-robot:hover {
     color: var(--secondary_light);
 }
-.hobbys__texto div {
+.programacion__texto div {
     padding-top: 2rem;
     width: 75%;
     margin: 0 auto;
@@ -242,10 +242,162 @@ Sobre mi
     column-gap: 2rem;
 }
 @media (min-width: 768px) {
-    .hobbys__texto i {
+    .programacion__texto i {
         font-size: 65px;
     }
 }
+/*======================
+-----------MUSICA-----------
+======================*/
+.musica {
+    background-color: #007500;
+}
+.audio {
+    display: none;
+}
+.musica__texto{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.musica__reproductor {
+    width: 70%;
+    padding: .5rem;
+    border: 1px solid var(--blanco);
+    border-radius: 1rem;
+    margin: 2rem auto;
+
+}
+.musica__reproductor > div {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.reproductor img {
+    width: 100%;
+}
+@media (min-width: 998px) {
+    .reproductor img {
+        width: 50%;
+    }
+}
+.reproductor__img {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.reproductor__controles {
+    width: 100%;
+    background-color: #555;
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: space-around;
+}
+.reproductor__controles i {
+    font-size: 30px;
+    cursor: pointer;
+    padding: .8rem;
+}
+.reproductor__controles i:hover {
+    color: var(--primary_light);
+}
+
+/*======================
+-----------SOUNDCLOUD-----------
+======================*/
+
+.soundcloud {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#soundcloud_rep iframe {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .soundcloud {
+        width: 90%;
+        margin: 1rem auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #soundcloud_rep iframe {
+        width: 500px;
+    }
+}
+.soundcloud__controles {
+    padding: .5rem 2rem;
+    width: 10%;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+.fa-dice {
+    font-size: 30px;
+    cursor: pointer;
+}
+.soundcloud__controles i:hover {
+    color: rgb(194, 71, 0);
+}
+/*======================
+-----------YOUTUBE-----------
+======================*/
+.youtube {
+    background-color: #c20000;
+}
+.youtube__texto {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.youtube__vid {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.youtube__vid iframe {
+    width: 310px;
+    margin: 2rem auto;
+}
+@media (min-width: 998px) {
+    .youtube__vid iframe {
+        width: 560px;
+        height: 315px;
+    }
+}
+.youtube__vid i {
+    margin-bottom: 2rem;
+}
+.youtube__vid i:hover {
+    color: var(--secondary_light);
+}
+
+/*======================
+-----------
+steam
+-----------
+======================*/
+.steam {
+    background-color: #20212d;
+}
+
+
+
 /*======================
 -----------
 Footer
@@ -300,7 +452,7 @@ TOOLTIPS
     z-index: 1;
     top: 125%;
     left: 50%;
-    margin-left: -70px;
+    margin-left: -65%;
   
     /* Fade in tooltip */
     opacity: 0;

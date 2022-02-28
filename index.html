@@ -61,8 +61,8 @@
         <section id="sobre_mi">
             <h2 class="titulo">Sobre Mi: Hobbys y pasatiempos</h2>
 
-            <div class="hobbys mitad">
-                <div class="hobbys__texto">
+            <div class="programacion mitad">
+                <div class="programacion__texto">
                     <h3 class="subtitulo">Desarrollo web y Programacion</h3>
                     <p>Este es mi hobby favorito. Estoy tomando un bootcamp para ser desarrollador web full stack javascript</p>
                     <p>Tambien me gusta programar con python, eh hecho muchas herramientas que me ayudan, entre otras cosas como un bot de discord FURRO! (si te interesa, abajo el link)</p>
@@ -78,12 +78,103 @@
                 <div>
                     <img src="assets/img/web.jpg" alt="Web develpment fox">
                 </div>
-
             </div>
 
+            <!-- musica -->
+
+            <div class="musica mitad">
+                <div class="musica__texto">
+                    <h3 class="subtitulo">Musica</h3>
+                    <p>Me gusta la musica, en especial escucharla con audifonos acostadito en mi camita.
+                        escucho de todo, desde musica clasica, hasta k-pop. Aqui tienes algunas de mis canciones favoritas</p>
+                </div>
+
+                <div class="musica__reproductor">
+                    <div>
+                        <div class="reproductor">
+                            <div class="reproductor__img">
+                                <img src="assets/img/navidad.webp" alt="Musica">
+                            </div>
+                            <h4 class="subtitulo">Nombre</h4>
+
+                            <div class="reproductor__controles">
+                                <i class="fas fa-angle-left"></i>
+                                <i class="fas fa-play-circle" id="play"></i>
+                                <!-- <i class="fas fa-pause-circle"></i> -->
+                                <i class="fas fa-angle-right"></i>
+                            </div>
+
+                            <!-- invisible -->
+                            <audio class="audio" controls id="Super Galaxy Rumble">
+                                <source src="assets/music/Super Galaxy Rumble.mp3" type="audio/mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- soundcloud -->
+
+                <div class="musica__texto">
+                    <p>Aqui puedes ver mas musica que escucho en soundcloud</p>
+                </div>
+
+                <div class="soundcloud">
+                    <div id="soundcloud_rep">
+                        <iframe height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/674133494&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/azazalmeow" title="Azazal" target="_blank" style="color: #cccccc; text-decoration: none;">Azazal</a> · <a href="https://soundcloud.com/azazalmeow/azazal-paws-and-play" title="Azazal - Paws and Play" target="_blank" style="color: #cccccc; text-decoration: none;">Azazal - Paws and Play</a></div>
+                    </div>
+
+                    <div class="soundcloud__controles">
+                        <i id="dado1" class="fas fa-dice tooltip"><span class="tooltiptext">Seleccion al azar jeje</span></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- youtube -->
+
+            <div class="youtube mitad">
+                <div class="youtube__texto">
+                    <h3 class="subtitulo">Youtube</h3>
+                    <p>Tambien tengo un canal de Youtube sobre tutoriales de piano, aunque lo tengo algo abandonado por estudios y trabajo</p>
+                    <p id="YT_stats"></p>
+                </div>
+
+                <div class="youtube__vid">
+                    <div id="vid_box">
+                        <iframe id="youtube_vid" src="https://www.youtube.com/embed/wpB8uWVXoQg" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </div>
+                    
+                    <i id="dado2" class="fas fa-dice tooltip"><span class="tooltiptext">Seleccion al azar jeje</span></i>
+                </div>
+            </div>
+
+            <!-- steam -->
+
+            <div class="steam">
+                <div class="mitad">
+                    <div>
+                        <img src="..." alt="Avatar steam">
+                        <p></p>
+                    </div>
+    
+                    <div>
+                        <p>Tambien me gusta jugar con amigos!. Me gusta jugar LoL, L4D2, Super Animal Royale etc. Aqui tienes informacion de mi perfil de Steam</p>
+                    </div>
+                </div>
+
+                <!-- stats -->
+
+                <div>
+                    <h2 class="subtitulo">Mis ultimos juegos jugados</h2>
+
+                    <div class="steam__stats">
+                        
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-
 
     <footer>
         <div>

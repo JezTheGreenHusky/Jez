@@ -164,7 +164,7 @@ let module = (async() => {
         }
     });
 
-    console.log(lista_vid)
+    //console.log(lista_vid)
 
     let dado2 = document.getElementById("dado2");
     dado2.addEventListener("click", () => {
@@ -199,8 +199,177 @@ let module2 = (async() => {
     let request = await fetch(resumen_jugador);
     let respuesta = await request.json();
 
-    console.log(respuesta.response.players[0].personaname);
-    
-    
+    let username = respuesta.response.players[0].personaname;
+    let src_img = respuesta.response.players[0].avatarfull;
+    let link = respuesta.response.players[0].profileurl;
 
+    let img_av = document.querySelector(".steam .mitad .profile img");
+    let text_profile = document.querySelector(".steam .mitad .profile p");
+    img_av.src = src_img;
+    text_profile.innerHTML = `
+        Nombre: ${username}<br>
+    `;
+
+
+
+    // ultimos juegos jugados
+    let request2 = await fetch(ultimos_juegos,
+        {
+            method: 'GET',
+            headers: new Headers({ 'Content-type': 'application/json'}),
+            mode: 'no-cors'
+        });
+    let respuesta2 = await request2.json();
+
+    console.log(respuesta2.response.games);
+
+    let ultimos_juegos_list = respuesta2.response.games;
+    let juegos_data = []
+    ultimos_juegos_list.forEach((juego, index) => {
+        juegos_data.push([
+            juego.name,
+            juego.appid,
+            juego.img_logo_url,
+            juego.playtime_forever,
+            juego.playtime_2weeks
+        ]);
+    });
+
+    juegos_data.forEach((juegos) => {
+        const nombre = 0;
+        const id = 1;
+        const img_id = 2;
+        const tiempo = 3;
+        const tiempo_2semanas = 4;
+        
+        let tiempoHora = (juegos[tiempo] / 60).toFixed(1);
+        let tiempoHoraSemana = (juegos[tiempo_2semanas] / 60).toFixed(1);
+
+        let img_src = `https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/${juegos[id]}/${juegos[img_id]}.jpg`;
+
+        let box = document.querySelector(".steam__stats");
+
+        box.innerHTML += `
+            <div class="card_steam">
+                <div>
+                    <img src="${img_src}" alt="${juegos[nombre]}">
+                </div>
+
+                <div>
+                    <h4 class="subtitulo">${juegos[nombre]}</h4>
+                </div>
+
+                <div>
+                    <p>Horas jugadas totales: ${tiempoHora}Hrs</p>
+                    <p>Horas jugadas las ultimas 2 semanas: ${tiempoHoraSemana}Hrs</p>
+                </div>
+            </div>
+        `;
+    })
+
+    console.log(juegos_data)
 })();
+
+/*======================
+-----------
+AMIGOS
+-----------
+======================*/
+
+let module_amigos = (() => {
+    let data_amigos = [
+        {
+            nombre: "Wolf Angel",
+            img_src: "assets/img/am_angel.webp",
+            descripcion: "Bueno el no es solo mi amigo, es mi pareja, mi persona favorita, el dueño de mi corazon, cola y todo  >/w/< <br>Es un chico muy dulce, amable, guapo, lindo y de todo lo bueno que hay en este mundo<br>Amo jugar con el jeje x//3"
+        },
+        {
+            nombre: "Loffy",
+            img_src: "assets/img/am_loffy.webp",
+            descripcion: "Mi hermanito querido y travieso jeje >w<. Solemos jugar animal royale y hablar de TODO."
+        },
+        {
+            nombre: "Evil Cato",
+            img_src: "assets/img/am__evil.webp",
+            descripcion: "Es la maldad encarnada en un tierno gato.<br>Mucho cuidado con el, puede matarte de ternura con su mirada y dejarte hipnotizado con sus dulces palabras."
+        },
+        {
+            nombre: "Awash",
+            img_src: "assets/img/am_awash.webp",
+            descripcion: "Un chico muy gracioso y buena onda, muy dificil te puedes aburrir con el >w<."
+        },
+        {
+            nombre: "Bandiel",
+            img_src: "assets/img/am_bandiel.webp",
+            descripcion: "No hablamos mucho, pero cuando hablamos siempre es super amable y cariñoso.<br>Increible jugador de zooba y muy paciente con los noobs xD<br>Tambien es un gran artista, muy talentoso nwn"
+        },
+        {
+            nombre: "Caisus the husky",
+            img_src: "assets/img/am_caisus.webp",
+            descripcion: "Conocido como maxi, es un chico buena onda y le tengo mucha confianza, es mi otro hermanito querido >/w/<"
+        },
+        {
+            nombre: "Kiro",
+            img_src: "assets/img/am_kiro.webp",
+            descripcion: "Otro chico cariñoso y amable >w<. <br>Es el artista de mi pfp actual y un jugador de zooba tambien >w<"
+        },
+        {
+            nombre: "r3mv",
+            img_src: "assets/img/am_r3mv.webp",
+            descripcion: "Gracias a el subi de nivel en steam xD, es un gran amigo y muy amable, siempre me la paso bien con el apesar de que hablamos poco. <br> Si no fuera por el, yo estaria perdido en este mundo cruel y pervertido x/D"
+        },
+        {
+            nombre: "shuu",
+            img_src: "assets/img/am_shuu.webp",
+            descripcion: "Un amigo de confianza para contar de TODO x//D, es otro bro muy amable y siempre con buenas historias y 'material' >w<"
+        }
+    ];
+
+    let box = document.querySelector(".amigos__lista");
+
+    data_amigos.forEach((amigo) => {
+        box.innerHTML += `
+            <div>
+                <img src="${amigo.img_src}" alt="${amigo.nombre}" data-descripcion="${amigo.descripcion}">
+            </div>
+        `;
+    });
+
+    box.addEventListener("click", (elem) => {
+        let elemento = elem.target;
+        if(elemento.matches("img")){
+            let box_descripcion = document.querySelector(".amigos__descripcion");
+
+            let descripcion = elemento.getAttribute("data-descripcion")
+
+            box_descripcion.innerHTML = `
+            <div>
+                <div>
+                    <img src="${elemento.src}" alt="${elemento.alt}">
+                </div>
+
+                <div>
+                    <h4 class="subtitulo">${elemento.alt}</h4>
+                </div>
+
+                <div>
+                    <p>${descripcion}</p>
+                </div>
+            </div>
+            `;
+        }
+    });
+})();
+
+function httpGetAsync(theUrl, callback)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.send(null);
+}
+
+console.log(httpGetAsync(resumen_jugador))

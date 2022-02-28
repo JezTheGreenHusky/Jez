@@ -62,6 +62,8 @@ body {
 .mitad {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 @media (min-width: 768px) {
     .mitad {
@@ -71,7 +73,20 @@ body {
     }
 }
 
-
+.tercio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 998px) {
+    .tercio {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+    }
+}
 /*======================
 -----------
 header
@@ -252,6 +267,11 @@ Sobre mi
 .musica {
     background-color: #007500;
 }
+.musica p,
+.youtube p {
+    text-align: center;
+    font-size: 22px;
+}
 .audio {
     display: none;
 }
@@ -260,6 +280,14 @@ Sobre mi
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+.musica__texto i {
+    font-size: 80px;
+    cursor: pointer;
+    color: var(--blanco);
+}
+.musica__texto i:hover {
+    color: #ff8800;
 }
 
 .musica__reproductor {
@@ -393,10 +421,98 @@ steam
 -----------
 ======================*/
 .steam {
+    background-color: #070b14;
+}
+.profile {
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.profile img {
+    width: 100%
+}
+.profile p {
+    text-align: center;
+    font-size: 22px;
+}
+#sobre_mi .steam__juegos h2 {
     background-color: #20212d;
 }
 
+.steam__descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.steam__descripcion i{
+    font-size: 100px;
+    color: var(--blanco);
+}
+.steam__descripcion i:hover{
+    color: var(--secondary_light);
+}
+.steam__descripcion a {
+    margin: 3rem auto;
+    padding: 1rem;
+}
+.steam__descripcion h3 {
+    padding-right: 1rem;
+}
+.steam__juegos {
+    background-color: #20212d;
+    padding-bottom: 2rem;
+}
 
+.steam__stats {
+    width: 90%;
+    margin: 0 auto;
+}
+.card_steam {
+    background-color: #070b14;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/*======================
+-----------
+Amigos
+-----------
+======================*/
+#amigos p {
+    font-size: 20px;
+    text-align: center;
+}
+.amigos_info {
+    width: 90%;
+    margin: 0 auto;
+}
+#amigos .amigos_info p {
+    text-align: start;
+    margin-bottom: 1rem;
+}
+
+#amigos h4 {
+    margin: .8rem auto;
+}
+.amigos__lista {
+    width: 90%;
+    margin: 2rem auto;
+}
+.amigos__lista img {
+    cursor: pointer;
+}
+
+.amigos__descripcion {
+    width: 90%;
+    margin: 2rem auto;
+}
+.amigos__descripcion {
+    width: 70%;
+    padding: 0% 15%;
+}
 
 /*======================
 -----------

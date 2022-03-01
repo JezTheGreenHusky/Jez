@@ -18,6 +18,9 @@
     padding: 0;
     margin: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 a {
     text-decoration: none;
 }
@@ -515,6 +518,171 @@ Amigos
 }
 
 /*======================
+-----------GALERIA.HTML-----------
+======================*/
+#galeria {
+    background-color: var(--secondary_light);
+}
+#galeria > div {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+#galeria h2 {
+    text-align: center;
+}
+.busqueda form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.busqueda .barra-busqueda {
+    width: 90%;
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	padding: 0 20px;
+	border-radius: 100px;
+	border: none;
+	text-align: center;
+	font-size: 16px;
+}
+@media (min-width: 768px) {
+    .busqueda .barra-busqueda {
+        width: 70%;
+    }
+}
+.nav_busqueda {
+    display: block;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .nav_busqueda {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.categorias {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.busqueda .categorias a {
+	color: var(--primary);
+	margin: 10px 20px;
+	font-size: 18px;
+	font-weight: 700;
+}
+.busqueda .categorias a:hover {
+    color: var(--secondary);
+}
+
+.busqueda .categorias a.activo {
+	color: var(--azul);
+}
+.categoria__margen a {
+    display: block;
+}
+/* 
+Galeria con MAUUI
+*/
+.grid {
+	position: relative;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 0.5s linear 1s;
+}
+
+.grid.imagenes-cargadas {
+	opacity: 1;
+}
+.item {
+    position: absolute;
+    display: block;
+    padding: 0;
+    margin: 1rem;
+    max-width: 30%;
+}
+.item__contenido {
+    position: relative;
+}
+.item__contenido img {
+    cursor: pointer;
+    max-height: 400px;
+    max-width: 300px;
+}
+@media (min-width: 768px) {
+    .item__contenido img {
+        max-height: 600px;
+        max-width: 520px;
+    }
+}
+@media (min-width: 1300px) {
+    .item__contenido img {
+        max-height: 600px;
+        max-width: 650px;
+    }
+}
+/* 
+overlay
+*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .9);
+
+    width: 100%;
+    height: 100%;
+
+    /* ocultarlo con none */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    /* colocar el parrafo debajo: */
+    flex-direction: column;
+}
+.overlay.activo {
+    display: flex;
+}
+.overlay img {
+    max-width: 100%;
+    max-height: 90%;
+}
+.overlay .descripcion {
+    display: block;
+    background: var(--blanco);
+    padding: 2rem;
+    text-align: center;
+    margin-top: -3.2rem;
+    border-radius: 1rem;
+    max-width: 50%;
+}
+.contenedor-img {
+    position: relative;
+    padding: 0;
+    max-width: 80%;
+    max-height: 85%;
+}
+
+.overlay #btn-cerrar-popup {
+	background: none;
+	font-size: 20px;
+	color: var(--blanco);
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	right: -20px;
+	top: -20px;
+}
+/*======================
 -----------
 Footer
 -----------
@@ -557,6 +725,7 @@ TOOLTIPS
   .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
+    font-size: 18px;
     background-color: #555;
     color: #fff;
     text-align: center;

@@ -10,7 +10,7 @@
     <meta name="keywords" content="Jez, furry, husky">
     <meta name="description" content="Hola, soy Jez, un furro husky y esta es mi pagina web">
     <meta name="author" content="Jez, The Green Husky">
-    <meta property="og:image" content="https://jezthegreenhusky.github.io/practicas-cursos-academico-tutoriales/1.%20bootcamps-formacion_academica/1.%20iguana_page/assets/img/iguana-1.webp">
+    <meta property="og:image" content="https://jezthegreenhusky.github.io/Jez/assets/img/regalo-1.webp">
 
 
     <!-- font -->
@@ -36,8 +36,8 @@
                 </div>
                 <nav class="nav">
                     <a href="#">Inicio</a>
-                    <a href="#">Sobre Mi</a>
-                    <a href="#">Galeria</a>
+                    <a href="#sobre_mi">Sobre Mi</a>
+                    <a href="#galeria">Galeria</a>
                 </nav>
             </div>
         </div>
@@ -46,7 +46,7 @@
 
         <div class="hero">
             <div class="hero__img">
-                <img src="assets/img/152_kiro.webp" alt="Mi pfp actual">
+                <img src="assets/img/regalo-1.webp" alt="Mi pfp actual">
             </div>
 
             <div class="hero__texto">
@@ -93,9 +93,9 @@
                     <div>
                         <div class="reproductor">
                             <div class="reproductor__img">
-                                <img src="assets/img/navidad.webp" alt="Musica">
+                                <img id="musica_img" src="https://th.bing.com/th/id/R.9ff7ec4dd955975294ebcac987879bce?rik=mX2udmSYcUQ37Q&riu=http%3a%2f%2f4.bp.blogspot.com%2f-YGKdNJODesQ%2fUzHx9R3nMZI%2fAAAAAAAANzg%2fdAIlQGeV0LY%2fs1600%2fcs_bg_champions.png&ehk=WaBFI%2ba5mUMMMxCRqNW5mI4mPjw%2bTIv68wjKpEGjwY4%3d&risl=&pid=ImgRaw&r=0" alt="Musica">
                             </div>
-                            <h4 class="subtitulo">Nombre</h4>
+                            <h4 id="music_name" class="subtitulo">Super Galaxy Rumble</h4>
 
                             <div class="reproductor__controles">
                                 <i class="fas fa-angle-left"></i>
@@ -125,7 +125,7 @@
                     </div>
 
                     <div class="soundcloud__controles">
-                        <i id="dado1" class="fas fa-dice tooltip"><span class="tooltiptext">Seleccion al azar jeje</span></i>
+                        <p class="tooltip"><i id="dado1" class="fas fa-dice"><span class="tooltiptext">Seleccion al azar</span></i></p>
                     </div>
                 </div>
             </div>
@@ -146,7 +146,7 @@
                                 allowfullscreen></iframe>
                     </div>
                     
-                    <i id="dado2" class="fas fa-dice tooltip"><span class="tooltiptext">Seleccion al azar jeje</span></i>
+                    <i id="dado2" class="fas fa-dice tooltip"><span class="tooltiptext">Seleccion al azar</span></i>
                 </div>
             </div>
 
@@ -190,16 +190,302 @@
 
                 <div class="mitad">
                     <div class="amigos__descripcion">
-    
+                        <div>
+                            <div>
+                                <img src="assets/img/am_angel.webp" alt="Wolf Angel">
+                            </div>
+            
+                            <div>
+                                <h4 class="subtitulo">💙Wolf Angel💙</h4>
+                            </div>
+            
+                            <div>
+                                <p>Bueno el no es solo mi amigo, es mi pareja, mi persona favorita, el dueño de mi corazon, cola y todo  >/w/< <br>Es un chico muy dulce, amable, guapo, lindo y de todo lo bueno que hay en este mundo<br>Amo jugar con el jeje x//3💞</p>
+                            </div>
+                        </div>
                     </div>
     
                     <div class="amigos__lista tercio">
-                        
-    
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- galeria -->
+
+        <section id="galeria">
+            <div>
+                <h2 class="titulo">Galeria de Arte</h2>
+                <div class="busqueda">
+                    <form action="">
+                        <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Escribe el nombre del artista aqui :3">
+                    </form>
+        
+                    <div class="nav_busqueda">
+                        <div class="categorias" id="categorias">
+                            <a href="#" class="activo">Todos</a>
+                            <a href="#">Hechos por mi</a>
+                            <a href="#">Hecho por mis amigos</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- muuri galeria -->
+    
+                <div class="grid" id="grid">
+
+                    <div class="item"
+                    data-categoria="hechos por mi"
+                    data-etiquetas="hechos por mi jez husky"
+                    data-descripcion="Mi primer dibujo serio de mi fursona y mi primera pfp de discord"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/mio-1.webp" alt="arte">
+                        </div>
+                    </div>
+    
+                    <!-- 2 -->
+                    
+                    <div class="item"
+                    data-categoria="hechos por mi"
+                    data-etiquetas="hechos por mi jez panda rojo"
+                    data-descripcion="Una de mis otras fursonas"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/mio-2.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+
+                    <div class="item"
+                    data-categoria="hechos por mi"
+                    data-etiquetas="hechos por mi jez wolf lobo"
+                    data-descripcion="Una de mis otras fursonas"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/mio-3.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 4 -->
+
+                    <div class="item"
+                    data-categoria="hechos por mi"
+                    data-etiquetas="hechos por mi jez wolf husky"
+                    data-descripcion="Mi lado oscuro xD"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/mio-4.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 5 -->
+
+                    <div class="item"
+                    data-categoria="hechos por mi"
+                    data-etiquetas="hechos por mi jez wolf husky navidad"
+                    data-descripcion="Mi fursona version navideña"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/mio-5.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 6 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' kiro"
+                    data-descripcion="Un regalo hecho por Kiro 💚"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-1.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 7 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' wolf angel"
+                    data-descripcion="Un regalo hecho mi hermoso novio ❤"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-2.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 8 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' ice cream warmachine eddy eddie"
+                    data-descripcion="Un regalo hecho por Warmachine (Ice) nwn"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-3.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 9 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' dizel"
+                    data-descripcion="Un regalo hecho por dizel"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-4.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 10 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' bandiel zorro dasher"
+                    data-descripcion="Un regalo hecho por Bandiel"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-5.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 11 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' shunoki sparky"
+                    data-descripcion="Un regalo hecho por Shunoki"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-6.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 12 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' warmachine ice cream eddy"
+                    data-descripcion="Un regalo hecho por warmachine"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-7.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 13 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' shunoki sparky"
+                    data-descripcion="Un regalo hecho por sparky"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-8.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 14 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' vorspiel"
+                    data-descripcion="Un regalo hecho por Vorspiel"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-9.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 15 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' wolf angel bf"
+                    data-descripcion="Un regalo hecho por Wolf Angel💙, mi dulce angelito ❤"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-10.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 16 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' dizel"
+                    data-descripcion="Un regalo hecho por dizel"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-11.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 17 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' wolf angel"
+                    data-descripcion="Un regalo hecho Wolf Angel💙, el dueño de corazoncito ❤"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-12.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 18 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' wolf angel"
+                    data-descripcion="Un regalo hecho Wolf Angel💙, una referencia a la date week de FNF"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-13.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 19 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' wolf angel"
+                    data-descripcion="Un regalo de navidad hecho Wolf Angel💙, el hermoso lobito horny "
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-14.webp" alt="arte">
+                        </div>
+                    </div>
+
+                    <!-- 20 -->
+
+                    <div class="item"
+                    data-categoria="hecho por mis amigos"
+                    data-etiquetas="'hecho por mis amigos' wolf angel"
+                    data-descripcion="Un regalo hecho Wolf Angel💙, mi meda naranjita >/w/<"
+                    >
+                        <div class="item__contenido">
+                            <img src="assets/img/regalo-15.webp" alt="arte">
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- overlay -->
+        <section class="overlay" id="overlay">
+			<div class="contenedor-img">
+				<button id="btn-cerrar-popup">X</button>
+				<img src="" alt="">
+			</div>
+			<p class="descripcion"></p>
+		</section>
     </main>
 
     <footer>
@@ -210,6 +496,7 @@
 
     <!-- js -->
     <script src="https://kit.fontawesome.com/c88a8a6234.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
     <script src="assets/js/script.js"></script>
     
 </body>

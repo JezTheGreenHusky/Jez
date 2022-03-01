@@ -3,28 +3,11 @@ window.addEventListener("load", ()=> {
     let reproductor = () => {
     
         let lista_musica = [
-            ["Super Galaxy Rumble", "https://th.bing.com/th/id/R.9ff7ec4dd955975294ebcac987879bce?rik=mX2udmSYcUQ37Q&riu=http%3a%2f%2f4.bp.blogspot.com%2f-YGKdNJODesQ%2fUzHx9R3nMZI%2fAAAAAAAANzg%2fdAIlQGeV0LY%2fs1600%2fcs_bg_champions.png&ehk=WaBFI%2ba5mUMMMxCRqNW5mI4mPjw%2bTIv68wjKpEGjwY4%3d&risl=&pid=ImgRaw&r=0"],
-            ["Alien victory", "https://i.ytimg.com/vi/qpWb_6zrEsw/maxresdefault.jpg"],
-            ["Can´t stop the feeling", "https://i.ytimg.com/vi/bngCHThe8rs/maxresdefault.jpg"],
-            ["cash-cash-overtime", "https://th.bing.com/th/id/R.c8e1103d3f98418cb61738c25a2c3df4?rik=8r4tYaRCDdu%2bxg&riu=http%3a%2f%2fwww.thissongslaps.com%2fwp-content%2fuploads%2f2013%2f10%2fovertime.jpg&ehk=MZNiL6wkzeSW%2bV0K4BDJx%2btW%2bHph%2bsq4%2f4cKMQjywZo%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"],
-            ["chipflake intro", "https://i.ytimg.com/vi/eIobkDbrypg/maxresdefault.jpg"],
-            ["Come with me", "https://th.bing.com/th/id/OIP.qJwiIBh3pDXtYaugmDWELAHaHa?pid=ImgDet&rs=1"],
-            ["Die anywhere else 8-bit", "https://i.ytimg.com/vi/4eQKEe3wPlM/maxresdefault.jpg"],
             ["Die anywhere else", "https://i.ytimg.com/vi/tvPOTj6t7JQ/maxresdefault.jpg"],
-            ["Firebird", "https://i.pinimg.com/originals/3e/6a/0e/3e6a0ee94dec77ae6f68f05335d514a5.jpg"],
-            ["Fish", "https://th.bing.com/th/id/OIP.cWD1y7OSvp9jNENIIjGAQAAAAA?pid=ImgDet&rs=1"],
-            ["flight-of-the-cat", "https://th.bing.com/th/id/OIP.6RDh_zejDVB2-_Z6I6FEzgHaEq?pid=ImgDet&rs=1"],
-            ["Fuyu no hanashi", "https://i.ytimg.com/vi/Ny_ytFZHcdw/maxresdefault.jpg"],
-            ["Heartbound Ramul", "https://th.bing.com/th/id/OIP.tdLOjb_h2AAyuxOEpqdG-AHaHa?pid=ImgDet&rs=1"],
-            ["I want to become a kemono", "https://th.bing.com/th/id/OIP.bKjAAJJvcA8V2-3fhIZgYAHaGJ?pid=ImgDet&rs=1"],
-            ["kitsune - Liebe", "https://i1.sndcdn.com/artworks-000213455431-29bkid-t500x500.jpg"],
+            ["cash-cash-overtime", "https://th.bing.com/th/id/R.c8e1103d3f98418cb61738c25a2c3df4?rik=8r4tYaRCDdu%2bxg&riu=http%3a%2f%2fwww.thissongslaps.com%2fwp-content%2fuploads%2f2013%2f10%2fovertime.jpg&ehk=MZNiL6wkzeSW%2bV0K4BDJx%2btW%2bHph%2bsq4%2f4cKMQjywZo%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"],
             ["No se habla de Bruno", "https://img.europapress.es/fotoweb/fotonoticia_20220208191736_640.jpg"],
-            ["Thats what I like", "https://i.ytimg.com/vi/2k7-PEqzfVo/hqdefault.jpg"],
-            ["the-muffin-song-asdfmovie-feat-schmoyoho", "https://th.bing.com/th/id/OIP.KsnZeUtEHFtNOAP_tqgyFQHaEK?pid=ImgDet&rs=1"],
-            ["TXT__LOERLOER_Official_MV", "https://th.bing.com/th/id/OIP.ZEB281MsKqH7Fq8FcWfoxAHaD4?pid=ImgDet&rs=1"],
             ["txt-loerloer-official-mv", "https://assets.nacionrex.com/__export/1591028324277/sites/debate/img/2020/06/01/102f8d272c388fbb69d682f027552e86_crop1591025803466.jpg_1834093470.jpg"],
-            ["Without you -", "https://th.bing.com/th/id/R.915591b794fa7b04d43a283b4b9d593a?rik=C01ry4N%2bSoFJRQ&riu=http%3a%2f%2fmusicweeklynews.com%2fwp-content%2fuploads%2f2017%2f08%2favicii-without-you-ft-sandro-cavazza-lyric-video.jpg&ehk=t3TErmv0GuTvp7S%2fmb4TfjEo7FExoX9KQ%2bJIqOxPiks%3d&risl=&pid=ImgRaw&r=0"],
-            ["You're Just Like Pop Music (320 kbps)", "https://i1.sndcdn.com/artworks-000369014520-nktrs5-t500x500.jpg"]
+            ["Without you -", "https://th.bing.com/th/id/R.915591b794fa7b04d43a283b4b9d593a?rik=C01ry4N%2bSoFJRQ&riu=http%3a%2f%2fmusicweeklynews.com%2fwp-content%2fuploads%2f2017%2f08%2favicii-without-you-ft-sandro-cavazza-lyric-video.jpg&ehk=t3TErmv0GuTvp7S%2fmb4TfjEo7FExoX9KQ%2bJIqOxPiks%3d&risl=&pid=ImgRaw&r=0"]
         ];
 
         let musica = document.getElementById(`${lista_musica[index][0]}`);

@@ -201,8 +201,8 @@ window.addEventListener("load", ()=> {
     
     // https://developer.valvesoftware.com/wiki/Steam_Web_API#Game_interfaces_and_methods
     
-    let resumen_jugador = "https://cors-anywhere.herokuapp.com/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamids=76561199041830855"
-    let ultimos_juegos = "https://cors-anywhere.herokuapp.com/https://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamid=76561199041830855&format=json";
+    let resumen_jugador = "https://mycoreproxy.herokuapp.com/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamids=76561199041830855"
+    let ultimos_juegos = "https://mycoreproxy.herokuapp.com/https://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamid=76561199041830855&format=json";
     
     let module2 = (async() => {
         let request = await fetch(resumen_jugador);

@@ -77,10 +77,9 @@ body {
 }
 
 .tercio {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    column-gap: .8rem;
+    row-gap: .8rem;
 }
 @media (min-width: 998px) {
     .tercio {
@@ -215,7 +214,7 @@ HERO
     }
 
     .hero__texto p {
-        font-size: 22px;
+        font-size: 28px;
     }
 }
 /*======================
@@ -315,13 +314,13 @@ Sobre mi
 }
 @media (min-width: 998px) {
     .reproductor img {
-        width: 50%;
+        width: 80%;
     }
 }
 .reproductor__img {
-    padding: 1rem;
     display: flex;
     justify-content: center;
+    margin-bottom: .8rem;
 }
 .reproductor__controles {
     width: 100%;
@@ -450,6 +449,14 @@ steam
     width: 90%;
     margin: 0 auto;
 }
+.steam__descripcion p {
+    font-size: 18px;
+}
+@media (min-width: 768px) {
+    .steam__descripcion p {
+        font-size: 22px;
+    }
+}
 .steam__descripcion i{
     font-size: 100px;
     color: var(--blanco);
@@ -472,6 +479,12 @@ steam
 .steam__stats {
     width: 90%;
     margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr)
+}
+@media (min-width: 998px) {
+    .steam__stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 .card_steam {
     background-color: #070b14;
@@ -499,6 +512,9 @@ Amigos
 
 #amigos h4 {
     margin: .8rem auto;
+}
+.amigos__lista {
+    grid-template-columns: repeat(3, 1fr);
 }
 .amigos__lista {
     width: 90%;
@@ -605,28 +621,22 @@ Galeria con MAUUI
     display: block;
     padding: 0;
     margin: 1rem;
-    max-width: 30%;
+    max-width: 35%;
+}
+@media (min-width: 768px) {
+    .item {
+        max-width: 33%;
+    }
+}
+@media (min-width: 1200px) {
+    .item {
+        max-width: 30%;
+    }
 }
 .item__contenido {
     position: relative;
 }
-.item__contenido img {
-    cursor: pointer;
-    max-height: 400px;
-    max-width: 300px;
-}
-@media (min-width: 768px) {
-    .item__contenido img {
-        max-height: 600px;
-        max-width: 520px;
-    }
-}
-@media (min-width: 1300px) {
-    .item__contenido img {
-        max-height: 600px;
-        max-width: 650px;
-    }
-}
+
 /* 
 overlay
 */

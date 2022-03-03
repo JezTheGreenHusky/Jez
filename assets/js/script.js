@@ -1,7 +1,13 @@
 window.addEventListener("load", ()=> {
+    /**
+     * Para recorrer el arreglo con la lista de canciones
+     */
     let index = 0;
     let reproductor = () => {
     
+        /**
+         * Lista con el nombre del archivo y cancion + src de una imagen
+         */
         let lista_musica = [
             ["Die anywhere else", "https://i.ytimg.com/vi/tvPOTj6t7JQ/maxresdefault.jpg"],
             ["cash-cash-overtime", "https://th.bing.com/th/id/R.c8e1103d3f98418cb61738c25a2c3df4?rik=8r4tYaRCDdu%2bxg&riu=http%3a%2f%2fwww.thissongslaps.com%2fwp-content%2fuploads%2f2013%2f10%2fovertime.jpg&ehk=MZNiL6wkzeSW%2bV0K4BDJx%2btW%2bHph%2bsq4%2f4cKMQjywZo%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"],
@@ -10,11 +16,14 @@ window.addEventListener("load", ()=> {
             ["Without you -", "https://th.bing.com/th/id/R.915591b794fa7b04d43a283b4b9d593a?rik=C01ry4N%2bSoFJRQ&riu=http%3a%2f%2fmusicweeklynews.com%2fwp-content%2fuploads%2f2017%2f08%2favicii-without-you-ft-sandro-cavazza-lyric-video.jpg&ehk=t3TErmv0GuTvp7S%2fmb4TfjEo7FExoX9KQ%2bJIqOxPiks%3d&risl=&pid=ImgRaw&r=0"]
         ];
 
+        /**
+         * Accede al reproductor por defecto(con la primera cancion) en el html.
+         * Mas reproductores se agregaran si se hace click en "<" o ">"
+         */
         let musica = document.getElementById(`${lista_musica[index][0]}`);
         musica.volume = 0.1;
     
-        // let rep_src = document.querySelector(".audio source");
-    
+        // seleccion de los botones del reproductor
         let play = document.getElementById("play");
         let botones = document.querySelector(".reproductor__controles");
     
@@ -42,6 +51,7 @@ window.addEventListener("load", ()=> {
                 }
                 musica.pause();
     
+                // se agrega un nuevo reproductor
                let box = document.querySelector(".reproductor");
                box.innerHTML += `
                    <audio class="audio" controls id="${lista_musica[index][0]}">
@@ -49,10 +59,11 @@ window.addEventListener("load", ()=> {
                    </audio>
                `;
                 
+                //se cambia la imagen y el titulo de la musica
                 document.getElementById("musica_img").src = lista_musica[index][1];
                 document.getElementById("music_name").innerHTML = lista_musica[index][0];
 
-    
+                // se cambia la variabale musica por el muevo reproductor (nueva musica)
                 musica = document.getElementById(`${lista_musica[index][0]}`);
                 musica.volume = 0.1;
                 musica.play();
@@ -204,7 +215,7 @@ window.addEventListener("load", ()=> {
     let resumen_jugador = "https://mycoreproxy.herokuapp.com/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamids=76561199041830855"
     let ultimos_juegos = "https://mycoreproxy.herokuapp.com/https://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamid=76561199041830855&format=json";
     
-    let module2 = (async() => {
+    let module_steam = (async() => {
         let request = await fetch(resumen_jugador);
         let respuesta = await request.json();
     
@@ -218,8 +229,6 @@ window.addEventListener("load", ()=> {
         text_profile.innerHTML = `
             Nombre: ${username}<br>
         `;
-    
-    
     
         // ultimos juegos jugados
         let request2 = await fetch(ultimos_juegos);
@@ -271,7 +280,7 @@ window.addEventListener("load", ()=> {
             `;
         })
     
-        console.log(juegos_data)
+        // console.log(juegos_data)
     })();
     
     /*======================
@@ -361,22 +370,9 @@ window.addEventListener("load", ()=> {
                     </div>
                 </div>
                 `;
-            }
+            };
         });
     })();
-    
-    function httpGetAsync(theUrl, callback)
-    {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.onreadystatechange = function() { 
-            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-                callback(xmlHttp.responseText);
-        }
-        xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-        xmlHttp.send(null);
-    }
-    
-    console.log(httpGetAsync(resumen_jugador))
 });
 
 
@@ -387,63 +383,61 @@ let modulo_galeria = (() => {
         }
     });
     
-    window.addEventListener('load', () => {
-        grid.refreshItems();
-        grid.refreshItems().layout();
-    
-        document.getElementById('grid').classList.add('imagenes-cargadas');
-    
-    
-        // Agregamos los listener de los enlaces para filtrar por categoria.
-        const enlaces = document.querySelectorAll('#categorias a');
-        enlaces.forEach((elemento) => {
-            elemento.addEventListener('click', (evento) => {
-                // primero remover la clase "activo" de todos los enlaces
-                evento.preventDefault();
-                enlaces.forEach((enlace) => enlace.classList.remove('activo'));
-                // Luego agregar la clase "activo", cuando se haga click
-                evento.target.classList.add('activo');
-    
-                // obterer la categoria clickeada para el filtrado
-                const categoria = evento.target.innerHTML.toLowerCase();
-                // utilizar el metodo de mmauui: grid.filter
-                // https://github.com/haltu/muuri#grid-method-filter
-    
-                // si categoria == todos: muestra todos (porque todos tienen el atributo data-categoria)
-                // si categoria != todos: filtra la categoria clickeada
-                categoria === 'todos' ? grid.filter('[data-categoria]') : grid.filter(`[data-categoria="${categoria}"]`);
-            });
+    grid.refreshItems();
+    grid.refreshItems().layout();
+
+    document.getElementById('grid').classList.add('imagenes-cargadas');
+
+
+    // Agregamos los listener de los enlaces para filtrar por categoria.
+    const enlaces = document.querySelectorAll('#categorias a');
+    enlaces.forEach((elemento) => {
+        elemento.addEventListener('click', (evento) => {
+            // primero remover la clase "activo" de todos los enlaces
+            evento.preventDefault();
+            enlaces.forEach((enlace) => enlace.classList.remove('activo'));
+            // Luego agregar la clase "activo", cuando se haga click
+            evento.target.classList.add('activo');
+
+            // obterer la categoria clickeada para el filtrado
+            const categoria = evento.target.innerHTML.toLowerCase();
+            // utilizar el metodo de mmauui: grid.filter
+            // https://github.com/haltu/muuri#grid-method-filter
+
+            // si categoria == todos: muestra todos (porque todos tienen el atributo data-categoria)
+            // si categoria != todos: filtra la categoria clickeada
+            categoria === 'todos' ? grid.filter('[data-categoria]') : grid.filter(`[data-categoria="${categoria}"]`);
         });
-    
-        // Agregamos el listener para la barra de busqueda
-        document.querySelector('#barra-busqueda').addEventListener('input', (evento) => {
-            // obtener el input y ponerlo en una variable
-            const busqueda = evento.target.value.toLowerCase();
-            // filtrar por elemento escrito (input)
-            grid.filter( (item) => item.getElement().dataset.etiquetas.includes(busqueda) );
+    });
+
+    // Agregamos el listener para la barra de busqueda
+    document.querySelector('#barra-busqueda').addEventListener('input', (evento) => {
+        // obtener el input y ponerlo en una variable
+        const busqueda = evento.target.value.toLowerCase();
+        // filtrar por elemento escrito (input)
+        grid.filter( (item) => item.getElement().dataset.etiquetas.includes(busqueda) );
+    });
+
+    // Agregamos listener para las imagenes
+    const overlay = document.getElementById('overlay');
+    document.querySelectorAll('.grid .item img').forEach((elemento) => {
+        elemento.addEventListener('click', () => {
+            const ruta = elemento.getAttribute('src');
+            const descripcion = elemento.parentNode.parentNode.dataset.descripcion;
+
+            overlay.classList.add('activo');
+            document.querySelector('#overlay img').src = ruta;
+            document.querySelector('#overlay .descripcion').innerHTML = descripcion;
         });
-    
-        // Agregamos listener para las imagenes
-        const overlay = document.getElementById('overlay');
-        document.querySelectorAll('.grid .item img').forEach((elemento) => {
-            elemento.addEventListener('click', () => {
-                const ruta = elemento.getAttribute('src');
-                const descripcion = elemento.parentNode.parentNode.dataset.descripcion;
-    
-                overlay.classList.add('activo');
-                document.querySelector('#overlay img').src = ruta;
-                document.querySelector('#overlay .descripcion').innerHTML = descripcion;
-            });
-        });
-    
-        // Eventlistener del boton de cerrar
-        document.querySelector('#btn-cerrar-popup').addEventListener('click', () => {
-            overlay.classList.remove('activo');
-        });
-    
-        // Eventlistener del overlay
-        overlay.addEventListener('click', (evento) => {
-            evento.target.id === 'overlay' ? overlay.classList.remove('activo') : '';
-        });
+    });
+
+    // Eventlistener del boton de cerrar
+    document.querySelector('#btn-cerrar-popup').addEventListener('click', () => {
+        overlay.classList.remove('activo');
+    });
+
+    // Eventlistener del overlay
+    overlay.addEventListener('click', (evento) => {
+        evento.target.id === 'overlay' ? overlay.classList.remove('activo') : '';
     });
 })()

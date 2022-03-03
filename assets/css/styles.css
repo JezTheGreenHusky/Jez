@@ -618,6 +618,7 @@ Galeria con MAUUI
 }
 .item {
     position: absolute;
+    cursor: pointer;
     display: block;
     padding: 0;
     margin: 1rem;

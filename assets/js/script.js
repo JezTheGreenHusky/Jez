@@ -156,6 +156,8 @@ window.addEventListener("load", ()=> {
         // estadisticas del canal
         let request = await fetch(channel_details_url);
         let respuesta = await request.json();
+
+        console.log(respuesta)
         
         let suscriptores = respuesta.items[0].statistics.subscriberCount;
         let videos = respuesta.items[0].statistics.videoCount;
@@ -242,7 +244,7 @@ window.addEventListener("load", ()=> {
             juegos_data.push([
                 juego.name,
                 juego.appid,
-                juego.img_logo_url,
+                juego.img_icon_url,//img_logo_url
                 juego.playtime_forever,
                 juego.playtime_2weeks
             ]);
@@ -258,7 +260,7 @@ window.addEventListener("load", ()=> {
             let tiempoHora = (juegos[tiempo] / 60).toFixed(1);
             let tiempoHoraSemana = (juegos[tiempo_2semanas] / 60).toFixed(1);
     
-            let img_src = `https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/${juegos[id]}/${juegos[img_id]}.jpg`;
+            let img_src = `https://cdn.cloudflare.steamstatic.com/steam/apps/${juegos[id]}/header.jpg`;
     
             let box = document.querySelector(".steam__stats");
     

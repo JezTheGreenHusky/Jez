@@ -214,8 +214,8 @@ window.addEventListener("load", ()=> {
     
     // https://developer.valvesoftware.com/wiki/Steam_Web_API#Game_interfaces_and_methods
     
-    let resumen_jugador = "https://mycoreproxy.herokuapp.com/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamids=76561199041830855"
-    let ultimos_juegos = "https://mycoreproxy.herokuapp.com/https://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamid=76561199041830855&format=json";
+    let resumen_jugador = "https://jezproxy.herokuapp.com/https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamids=76561199041830855"
+    let ultimos_juegos = "https://jezproxy.herokuapp.com/https://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamid=76561199041830855&format=json";
     
     let module_steam = (async() => {
         let request = await fetch(resumen_jugador);
@@ -244,7 +244,6 @@ window.addEventListener("load", ()=> {
             juegos_data.push([
                 juego.name,
                 juego.appid,
-                juego.img_icon_url,//img_logo_url
                 juego.playtime_forever,
                 juego.playtime_2weeks
             ]);
@@ -253,9 +252,8 @@ window.addEventListener("load", ()=> {
         juegos_data.forEach((juegos) => {
             const nombre = 0;
             const id = 1;
-            const img_id = 2;
-            const tiempo = 3;
-            const tiempo_2semanas = 4;
+            const tiempo = 2;
+            const tiempo_2semanas = 3;
             
             let tiempoHora = (juegos[tiempo] / 60).toFixed(1);
             let tiempoHoraSemana = (juegos[tiempo_2semanas] / 60).toFixed(1);

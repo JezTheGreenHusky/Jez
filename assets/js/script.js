@@ -332,9 +332,9 @@ window.addEventListener("load", ()=> {
                 descripcion: "Gracias a el subi de nivel en steam xD, es un gran amigo y muy amable, siempre me la paso bien con el apesar de que hablamos poco. <br> Si no fuera por el, yo estaria perdido en este mundo cruel y pervertido x/D"
             },
             {
-                nombre: "Soxiphilis",
-                img_src: "assets/img/am_soxi.webp",
-                descripcion: "Un Cheetah muy amigable y de mucha confianza, simpatico como todo un mejor amigo >w<"
+                nombre: "Kyan",
+                img_src: "assets/img/am_kyan.webp",
+                descripcion: "Amigable, y leal amigo, tkm brooo"
             }
         ];
     

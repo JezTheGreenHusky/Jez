@@ -317,9 +317,9 @@ window.addEventListener("load", ()=> {
                 descripcion: "No hablamos mucho, pero cuando hablamos siempre es super amable y cariñoso.<br>Increible jugador de zooba y muy paciente con los noobs xD<br>Tambien es un gran artista, muy talentoso nwn"
             },
             {
-                nombre: "Caisus the husky",
-                img_src: "assets/img/am_caisus.webp",
-                descripcion: "Conocido como maxi, es un chico buena onda y le tengo mucha confianza, es mi otro hermanito querido >/w/<"
+                nombre: "Soxi",
+                img_src: "assets/img/am_soxi.webp",
+                descripcion: "Un Cheetah de lo mas cool, es un placer hablar con el y reirme con sus momos xdxd"
             },
             {
                 nombre: "Kiro",

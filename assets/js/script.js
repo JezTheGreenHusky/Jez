@@ -318,7 +318,7 @@ window.addEventListener("load", ()=> {
             },
             {
                 nombre: "Soxi",
-                img_src: "assets/img/am_soxi.webp",
+                img_src: "https://cdn.discordapp.com/avatars/828401256338423849/38a587116ff03c01ade17d215234e4be.webp?size=300",
                 descripcion: "Un Cheetah de lo mas cool, es un placer hablar con el y reirme con sus momos xdxd"
             },
             {

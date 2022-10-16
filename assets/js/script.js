@@ -302,29 +302,29 @@ window.addEventListener("load", ()=> {
                 descripcion: "Mi hermanito querido y travieso jeje >w<. Solemos jugar animal royale y hablar de TODO."
             },
             {
-                nombre: "Evil Cato",
-                img_src: "assets/img/am__evil.webp",
-                descripcion: "Es la maldad encarnada en un tierno gato.<br>Mucho cuidado con el, puede matarte de ternura con su mirada y dejarte hipnotizado con sus dulces palabras."
+                nombre: "Emisito-kun",
+                img_src: "assets/img/am_emi.webp",
+                descripcion: "Un gran amigo. Nos apoyamos mucho en nuestros problemas. Aunque tambien es muy travieso >:3"
             },
             {
-                nombre: "Awash",
-                img_src: "assets/img/am_awash.webp",
-                descripcion: "Un chico muy gracioso y buena onda, muy dificil te puedes aburrir con el >w<."
+                nombre: "Zafine (Caisus)",
+                img_src: "assets/img/am_caisus.webp",
+                descripcion: "Un chico muy amable y de confianza."
             },
             {
-                nombre: "Bandiel",
-                img_src: "assets/img/am_bandiel.webp",
-                descripcion: "No hablamos mucho, pero cuando hablamos siempre es super amable y cariñoso.<br>Increible jugador de zooba y muy paciente con los noobs xD<br>Tambien es un gran artista, muy talentoso nwn"
+                nombre: "Gooldmoon",
+                img_src: "assets/img/am_goldi.webp",
+                descripcion: "Tambien llamado osito-sensei, es un gran amigo de confianza al que siempre le pido consejos. Un oso muy sabio :3"
             },
             {
                 nombre: "Soxi",
                 img_src: "assets/img/am_soxi.webp",
-                descripcion: "Un Cheetah de lo mas cool, es un placer hablar con el y reirme con sus momos xdxd"
+                descripcion: "Un Cheetah de lo mas cool, un gran amigo de confianza, mi mejor amigo <3"
             },
             {
-                nombre: "Kiro",
-                img_src: "assets/img/am_kiro.webp",
-                descripcion: "Otro chico cariñoso y amable >w<. <br>Es el artista de mi pfp actual y un jugador de zooba tambien >w<"
+                nombre: "Lalonganiza",
+                img_src: "assets/img/am_lalo.webp",
+                descripcion: "Tambien llamado lalo, es mi maestro, un chico mamado que me dio la bendicion del awa para ganar musculo y subir de peso."
             },
             {
                 nombre: "r3mv",
@@ -332,9 +332,9 @@ window.addEventListener("load", ()=> {
                 descripcion: "Gracias a el subi de nivel en steam xD, es un gran amigo y muy amable, siempre me la paso bien con el apesar de que hablamos poco. <br> Si no fuera por el, yo estaria perdido en este mundo cruel y pervertido x/D"
             },
             {
-                nombre: "Kyan",
-                img_src: "assets/img/am_kyan.webp",
-                descripcion: "Amigable, y leal amigo, tkm brooo"
+                nombre: "Ness",
+                img_src: "assets/img/am_ness.webp",
+                descripcion: "Un chico muy inteligente, amable y cariñoso, jugamos ajedrez y ablamos de dibujo."
             }
         ];
     

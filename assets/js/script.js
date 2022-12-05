@@ -214,12 +214,8 @@ window.addEventListener("load", ()=> {
     
     // https://developer.valvesoftware.com/wiki/Steam_Web_API#Game_interfaces_and_methods
     
-    let resumen_jugador = "https://api.allorigins.win/raw?url=https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamids=76561199041830855"
-    let ultimos_juegos = "https://api.allorigins.win/raw?url=https://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamid=76561199041830855&format=json";
-    
-
-    resumen_jugador = `https://api.allorigins.win/get?url=${encodeURIComponent('https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamids=76561199041830855')}`
-    ultimos_juegos = `https://api.allorigins.win/get?url=${encodeURIComponent('https://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamid=76561199041830855&format=json')}`
+    let resumen_jugador = "http://api.allorigins.win/get?url=https%3A//api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/%3Fkey%3D7823223CAD5CD4EB1F21E8E4A8069BAB%26steamids%3D76561199041830855&callback=?"
+    let ultimos_juegos = "http://api.allorigins.win/get?url=https%3A//api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/%3Fkey%3D7823223CAD5CD4EB1F21E8E4A8069BAB%26steamid%3D76561199041830855%26format%3Djson&callback=?";
 
     let module_steam = (async() => {
         let request = await fetch(resumen_jugador);

@@ -16,6 +16,7 @@ window.addEventListener("load", ()=> {
             ["Fallacy", "https://th.bing.com/th/id/OIP.6oVQnCsulVN-8dTwGVRi7AHaHa?pid=ImgDet&rs=1"]
         ];
 
+        console.log(lista_musica)
         /**
          * Accede al reproductor por defecto(con la primera cancion) en el html.
          * Mas reproductores se agregaran si se hace click en "<" o ">"

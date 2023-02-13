@@ -10,10 +10,10 @@ window.addEventListener("load", ()=> {
          */
         let lista_musica = [
             ["Die anywhere else", "https://i.ytimg.com/vi/tvPOTj6t7JQ/maxresdefault.jpg"],
-            ["cash-cash-overtime", "https://th.bing.com/th/id/R.c8e1103d3f98418cb61738c25a2c3df4?rik=8r4tYaRCDdu%2bxg&riu=http%3a%2f%2fwww.thissongslaps.com%2fwp-content%2fuploads%2f2013%2f10%2fovertime.jpg&ehk=MZNiL6wkzeSW%2bV0K4BDJx%2btW%2bHph%2bsq4%2f4cKMQjywZo%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"],
-            ["No se habla de Bruno", "https://img.europapress.es/fotoweb/fotonoticia_20220208191736_640.jpg"],
-            ["txt-loerloer-official-mv", "https://assets.nacionrex.com/__export/1591028324277/sites/debate/img/2020/06/01/102f8d272c388fbb69d682f027552e86_crop1591025803466.jpg_1834093470.jpg"],
-            ["Without you -", "https://th.bing.com/th/id/R.915591b794fa7b04d43a283b4b9d593a?rik=C01ry4N%2bSoFJRQ&riu=http%3a%2f%2fmusicweeklynews.com%2fwp-content%2fuploads%2f2017%2f08%2favicii-without-you-ft-sandro-cavazza-lyric-video.jpg&ehk=t3TErmv0GuTvp7S%2fmb4TfjEo7FExoX9KQ%2bJIqOxPiks%3d&risl=&pid=ImgRaw&r=0"]
+            ["Undertale Dating start", "https://th.bing.com/th/id/R.a6d860e4838858750657d9e05478a480?rik=Tc73ZjAFft92Ww&riu=http%3a%2f%2fih0.redbubble.net%2fimage.189719875.8444%2fraf%2c750x1000%2c075%2ct%2cblack.u1.jpg&ehk=pAh8E%2fgCnhFwN4iLs7UHFxctoArLGqyhwIgavkFQzO8%3d&risl=&pid=ImgRaw&r=0"],
+            ["Galantis - Satisfied ft MAX", "https://yt3.ggpht.com/a/AATXAJz1memzaKdtvRY4MNUDAXid9eo-7ye38M136_-n5Q=s900-c-k-c0xffffffff-no-rj-mo"],
+            ["Louis Tomlinson - Always You (Official Lyric Video)", "https://th.bing.com/th/id/OIP.1vBAyDUYnSkyOvWRqHkNhQHaEK?pid=ImgDet&rs=1"],
+            ["Fallacy", "https://th.bing.com/th/id/OIP.6oVQnCsulVN-8dTwGVRi7AHaHa?pid=ImgDet&rs=1"]
         ];
 
         /**

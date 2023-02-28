@@ -16,6 +16,7 @@ window.addEventListener("load", ()=> {
             ["Fallacy", "https://th.bing.com/th/id/OIP.6oVQnCsulVN-8dTwGVRi7AHaHa?pid=ImgDet&rs=1"]
         ];
 
+        // console.log(lista_musica)
         /**
          * Accede al reproductor por defecto(con la primera cancion) en el html.
          * Mas reproductores se agregaran si se hace click en "<" o ">"
@@ -157,7 +158,7 @@ window.addEventListener("load", ()=> {
         let request = await fetch(channel_details_url);
         let respuesta = await request.json();
 
-        console.log(respuesta)
+        //console.log(respuesta)
         
         let suscriptores = respuesta.items[0].statistics.subscriberCount;
         let videos = respuesta.items[0].statistics.videoCount;
@@ -214,12 +215,17 @@ window.addEventListener("load", ()=> {
     
     // https://developer.valvesoftware.com/wiki/Steam_Web_API#Game_interfaces_and_methods
     
-    let resumen_jugador = "https://api.allorigins.win/raw?url=https%3A//api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/%3Fkey%3D7823223CAD5CD4EB1F21E8E4A8069BAB%26steamids%3D76561199041830855&callback=?"
-    let ultimos_juegos = "https://api.allorigins.win/raw?url=https%3A//api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/%3Fkey%3D7823223CAD5CD4EB1F21E8E4A8069BAB%26steamid%3D76561199041830855%26format%3Djson&callback=?";
+    // let resumen_jugador = "https://api.allorigins.win/raw?url=https%3A//api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/%3Fkey%3D7823223CAD5CD4EB1F21E8E4A8069BAB%26steamids%3D76561199041830855&callback=?"
+    let resumen_jugador = `https://api.allorigins.win/get?url=${encodeURIComponent('http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamids=76561199041830855')}`
+    let ultimos_juegos = `https://api.allorigins.win/get?url=${encodeURIComponent('http://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v0001/?key=7823223CAD5CD4EB1F21E8E4A8069BAB&steamid=76561199041830855')}`;
 
     let module_steam = (async() => {
         let request = await fetch(resumen_jugador);
         let respuesta = await request.json();
+        // console.log(respuesta.contents)
+        // console.log(JSON.parse(respuesta.contents))
+        respuesta = JSON.parse(respuesta.contents)
+
     
         let username = respuesta.response.players[0].personaname;
         let src_img = respuesta.response.players[0].avatarfull;
@@ -235,8 +241,9 @@ window.addEventListener("load", ()=> {
         // ultimos juegos jugados
         let request2 = await fetch(ultimos_juegos);
         let respuesta2 = await request2.json();
+        respuesta2 = JSON.parse(respuesta2.contents)
     
-        console.log(respuesta2.response.games);
+        console.log(respuesta2);
     
         let ultimos_juegos_list = respuesta2.response.games;
         let juegos_data = []

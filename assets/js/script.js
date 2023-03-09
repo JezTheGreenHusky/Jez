@@ -301,7 +301,7 @@ window.addEventListener("load", ()=> {
             {
                 nombre: "💙Wolf Angel💙",
                 img_src: "assets/img/am_angel.webp",
-                descripcion: "Bueno el no es solo mi amigo, es mi pareja, mi persona favorita, el dueño de mi corazon, cola y todo  >/w/< <br>Es un chico muy dulce, amable, guapo, lindo y de todo lo bueno que hay en este mundo<br>Amo jugar con el jeje x//3💞"
+                descripcion: "El es mi mejor amigo, me gusta pasar el tiempo con el. Es un gran apoyo emocional."
             },
             {
                 nombre: "Loffy",

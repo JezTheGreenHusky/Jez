@@ -539,6 +539,11 @@ Amigos
 #amigos {
     display: none;
 }
+@media (min-width: 998px) {
+    #amigos {
+        display: none;
+    }
+}
 /* No mostrare los amigos pero quiero matener el codigo, asi que lo ocultare */
 
 #amigos p {

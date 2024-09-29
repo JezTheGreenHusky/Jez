@@ -51,6 +51,9 @@ body {
     margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
+    p {
+        font-size: 20px;
+    }
     .titulo {
         text-align: center;
         font-size: 38px;
@@ -270,6 +273,29 @@ Sobre mi
         font-size: 65px;
     }
 }
+/*======================
+----------- LIBROS y Gym-----------
+======================*/
+.libros,
+.gym {
+    padding: 2rem 0rem;
+}
+.libros {
+    background-color: #3a006c;
+}
+.gym {
+    background-color: #50005b;
+}
+.libros img,
+.gym img {
+    border-radius: 1rem;
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+
+
 /*======================
 -----------MUSICA-----------
 ======================*/

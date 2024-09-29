@@ -509,6 +509,12 @@ steam
 Amigos
 -----------
 ======================*/
+
+#amigos {
+    display: none;
+}
+/* No mostrare los amigos pero quiero matener el codigo, asi que lo ocultare */
+
 #amigos p {
     font-size: 20px;
     text-align: center;
